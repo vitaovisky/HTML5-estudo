@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- head engloba as tags que não estarão na estrutura da página, mas indicarão funções externas ao navegador, ou carregará scripts, etc -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Estudos</title>
+    <!-- Titulo do site, aparecerá na aba do navegador -->
+</head>
+
+<body>
+    <!-- No boddy há tags importantes para a semântica como o header, main e footer, além de outras como section, article, aside, nav, etc -->
+    <header id="topo" style="background-color: lightgray;">
+        <p>header é a tag que engloba todo o cabeçalho da página</p>
+        <nav>
+            <ul>
+                <li>
+                    <p>Junto ao header é normal ter a tag nav, junto de listas para organizar o menu de navegação</p>
+                </li>
+                <li>
+                    <p>Separando os itens da navegação em listas</p>
+                </li>
+                <li>
+                    <p>Podendo se utilizar de ul e ol para listas não-ordenadas e listas ordenadas respectivamente</p>
+                </li>
+                <li>
+                    <p>E li para os itens das listas.</p>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>main é a tag que engloba todo o corpo da página</p>
+        <h1>h1 até h6 são as tags de título do site, em ordem de importância do 1 ao 6</h1>
+        <img src="./HTML-5-Badge-Logo.png" style="width: 450px" alt="É importante que imagens com relevância na página contenham um alt para a acessibilidade. Leitores de tela utilizarão essa função.">
+        <p>A tag img agrega imagens a página, é importante ter um atributo alt nessas tags para a acessibilidade. Como forma semântica, caso outras mídias sejam adicionadas, há tags específicas para elas, como audio, video.</p>
+        <p>p é a tag que irá gerar parágrafos no html</p>
+        <p>As tags, i <i>itálico</i>, u <u>underline</u>, mark <mark>marca-texto</mark></p>
+        <div style="background-color: aquamarine; width: 200px;">
+            <p>div são tags somente estruturais, não possuem peso semântico</p>
+        </div>
+        <section style="background-color: bisque; width: 200px;">
+            <p>section também terão utilização similar a div, porém com peso semântico, marca seções de conteudo</p>
+        </section>
+        <article style="background-color:cornsilk; width: 200px;">
+            <p>article também terão utilização similar a div, porém com peso semântico, article normalmente será utilizado para um contaudo independente do contexto da página</p>
+        </article>
+        <a href="https://www.w3schools.com/TAGS/ref_html_browsersupport.asp" target="_blank">A tag a irá ancorar algum link externo ou parte do projeto web. Por padrão irá abrir o link na mesma aba, para abrir em aba diferente é necessário o atributo target:_blank</a>
+        <p>Para ancoragem do link da mesma página ou documento é utilizado o atributo id como demonstrado no próximo link -><a href="#topo">Voltar ao topo</a></p>
+        <form action="" summary="Acessibilidade do formulário" method="post">
+            <caption>A tag form irá agrupar um formulário, nela a tag caption cria uma legenda do formulário e o atributo summary auxiliar na acessibilidade</caption>
+            <p>O atributo method do form irá gerar a forma de envio do formulário ,sendo post a forma segura, o metodo get envia por http.</p>
+            <label for="nome">A tag label indica uma legenda da caixa de escrita do formulário. <br><strong>Nome:</strong> </label><br>
+            <input type="text" name="nome" id="nome"><br>
+            <!-- A tag input irá criar a caixa de entrada do usuário, o type desta tag indica o que esperar nesta caixa, text, email, number, etc -->
+            <label for="numero">A tag input cria a caixa de escrita, e o atributo type irá designar o que esperar de registro no input.<br> <strong>Numero: </strong></label><br>
+            <input type="number" name="numero" id="numero"><br>
+            <label for="email">O tipo registrado no type do input irá influenciar no que esperar nos campos para digitação.<br><strong>Email:</strong></label><br>
+            <input type="email" name="email" id="email"><br>
+            <textarea name="textarea" id="textarea" style="margin-top: 10px;width: 300px">A Tag textarea gera uma área maior para escrita</textarea><br>
+            <button type="submit">Botão Enviar</button>
+            <button type="reset">Botão Reset</button>
+            <p>São botões dentro do formulário com funções específicas para o formulário. Apesar de que a tag button poder ser utilizada fora do formulário.</p>
+            <p>O atributo type designa o que estes botões irão realizar, submit(enviar o formulário) ou reset(limpar os campos)</p>
+            <table>
+                <caption>Table é a tag para tabelas</caption>
+                <thead>
+                    <tr>
+                        <th>Head da tabela</th>
+                        <th>utiliza tr(table row) e th(para cada célula)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Corpo da tabela</td>
+                        <td>utiliza tr(table row) e td(para cada célula)</td>
+                    </tr>
+                    <tr>
+                        <td>célula</td>
+                        <td>célula</td>
+                    </tr>
+                    <tr>
+                        <td>célula</td>
+                        <td>célula</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Footer da tabela</td>
+                        <td>Informações, final, total, etc.</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <p>Iframe é uma tag para incorporar informações externas ao site. Irá rodar outro documento dentro da página atual.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31797789.946575012!2d-73.08530277612638!3d-13.377231102065448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1716767539943!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        </form>
+    </main>
+    <footer style="background-color: lightgray;">
+        <p>footer é a tag que engloba todo o rodapé da página.</p>
+        <p>Normalmente são adicionados créditos, informações de contato, uma navegação secundária, etc.</p>
+    </footer>
+</body>
+
+</html>
